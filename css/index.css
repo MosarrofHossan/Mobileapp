@@ -3,7 +3,7 @@
 html {
     /* ブラウザのデフォルトが16px                        */
     /* デフォルトの16pxの代わりに1emが10pxになるように調整 */
-    font-size: 62.5%;
+    font-size: 50.5%;
 }
 
 /* 「*」はユニバーサルセレクタ（すべての要素を対象にするセレクタ）でbox-sizing: border-box;を指定 */
@@ -38,6 +38,7 @@ body{
         /* https://developer.mozilla.org/ja/docs/Web/CSS/background-size */
         /* https://developer.mozilla.org/ja/docs/Web/CSS/background */
     overflow: hidden;
+    background-repeat: no-repeat;
 }
 
 header, footer, h1, h2, h3, p, div, .container01, .filler01 {
@@ -111,7 +112,7 @@ a:hover{
 /*****************************/
 /* container  item           */
 /*****************************/
-.container01-01 , .container01-02, .container01-03 , .container01-04 {
+.container01-01 , .container01-02, .container01-03 , .container01-04 , .container01-05 {
     display: flex;
         /*https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Flexible_Box_Layout*/
     flex-wrap:wrap;
@@ -155,10 +156,10 @@ a:hover{
 /*****************************/
 footer> p {
     position: absolute;/*←絶対位置*/
-    bottom: 5px; /*下に固定*/
+    bottom: 0px; /*下に固定*/
     width: 100%;
     margin: 0px;
-    padding: 1px;
+    padding: 0px;
     color: whitesmoke;
     font: 1em Rajdhani;
     text-align: center;
@@ -169,7 +170,7 @@ footer> p {
 /* https://www.design-memo.com/coding/css-media-queries */
 /* mobileのときのスタイル */
 /*******************************************************/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: auto) {
     body{
         background-size: auto 812px;
     }
